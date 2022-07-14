@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/warning_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpFragment">
+
+    <TextView
+        android:id="@+id/textView_help_title"
+        style="@style/warning_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="HELP"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_help_emergencynumber"
+        style="@style/warning_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Emergency Number"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_help_title" />
+
+    <ImageButton
+        android:id="@+id/imageButton_emergency"
+        style="@style/img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:tint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/button_emergencynumber"
+        app:layout_constraintStart_toStartOf="@+id/textView_help_emergencynumber"
+        app:layout_constraintTop_toTopOf="@+id/button_emergencynumber"
+        app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+    <Button
+        android:id="@+id/button_emergencynumber"
+        style="@style/warning_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="999"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_emergency"
+        app:layout_constraintTop_toBottomOf="@+id/textView_help_emergencynumber" />
+
+    <TextView
+        android:id="@+id/textView_help_suicidehotlines"
+        style="@style/warning_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Suicide Hotlines"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageButton_emergency"
+        app:layout_constraintTop_toBottomOf="@+id/button_emergencynumber" />
+
+    <ImageButton
+        android:id="@+id/imageButton_hotline_1"
+        style="@style/img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:tint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/button_hotline_1"
+        app:layout_constraintStart_toStartOf="@+id/textView_help_suicidehotlines"
+        app:layout_constraintTop_toTopOf="@+id/button_hotline_1"
+        app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+    <Button
+        android:id="@+id/button_hotline_1"
+        style="@style/warning_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="03-76272929 (Befrienders)"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_hotline_1"
+        app:layout_constraintTop_toBottomOf="@+id/textView_help_suicidehotlines" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton_hotline_2"
+        style="@style/img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:tint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/button_hotline_2"
+        app:layout_constraintStart_toStartOf="@+id/imageButton_hotline_1"
+        app:layout_constraintTop_toTopOf="@+id/button_hotline_2"
+        app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+    <Button
+        android:id="@+id/button_hotline_2"
+        style="@style/warning_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="063-92850039 (LIFELINE)"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_hotline_2"
+        app:layout_constraintTop_toBottomOf="@+id/button_hotline_1" />
+
+    <TextView
+        android:id="@+id/textView_help_psychiatrists"
+        style="@style/warning_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Psychiatrists"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <Button
+        android:id="@+id/button_help_findpsychiatrists"
+        style="@style/warning_sub_button_text"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Find Psychiatrists"
+        app:layout_constraintStart_toStartOf="@+id/textView_help_psychiatrists"
+        app:layout_constraintTop_toBottomOf="@+id/textView_help_psychiatrists" />
+
+    <View
+        android:id="@+id/view"
+        android:backgroundTint="@color/warning_general_line"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/entry_general_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_hotline_2" />
+
+    <TextView
+        android:id="@+id/textView_help_diary"
+        style="@style/warning_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Or Perhaps Write Down\nYour Feelings?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/button_help_findpsychiatrists"
+        app:layout_constraintTop_toBottomOf="@+id/button_help_findpsychiatrists" />
+
+    <Button
+        android:id="@+id/button_help_findDiary"
+        style="@style/warning_sub_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Diary"
+        app:layout_constraintStart_toStartOf="@+id/textView_help_diary"
+        app:layout_constraintTop_toBottomOf="@+id/textView_help_diary" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

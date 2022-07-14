@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/entry_background">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/entry_background"
+        tools:context=".LoginFragment">
+
+
+
+        <TextView
+            android:id="@+id/textView_register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/entry_background"
+            android:fontFamily="@font/lora_bold"
+            android:text="Sorrow To Smiles"
+            android:textColor="@color/entry_general_text"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_logo" />
+
+        <ImageView
+            android:id="@+id/imageView_logo"
+            style="@style/img"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/sorrowtosmileslogo_light_on_invis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_login_email_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/entry_background"
+            android:fontFamily="@font/lora_regular"
+            android:text="EMAIL:"
+            android:textColor="@color/entry_general_text"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/textView_register_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView_register_title" />
+
+        <EditText
+            android:id="@+id/login_email"
+            style="@style/entry_editText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView_login_email_display"
+            app:layout_constraintTop_toBottomOf="@+id/textView_login_email_display"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView_login_password_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/entry_background"
+            android:text="PASSWORD:"
+            android:textColor="@color/entry_general_text"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/login_email"
+            app:layout_constraintTop_toBottomOf="@+id/login_email" />
+
+        <EditText
+            android:id="@+id/login_password"
+            style="@style/entry_editText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="@+id/textView_login_password_display"
+            app:layout_constraintTop_toBottomOf="@+id/textView_login_password_display"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="128dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/texture_rectangle_round"
+            android:fontFamily="@font/lora_bold"
+            android:text="Login"
+            android:textColor="@color/entry_focal_button_text"
+            android:textSize="16sp"
+            app:backgroundTint="@color/entry_focal_button_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_password" />
+
+        <Button
+            android:id="@+id/button_login_gotoRegister"
+            android:layout_width="128sp"
+            android:layout_height="48sp"
+            android:background="@drawable/texture_rectangle_round_border"
+            android:fontFamily="@font/lora_bold"
+            android:text="Register"
+            android:textColor="@color/entry_sub_button_text"
+            android:textSize="16sp"
+            app:backgroundTint="#467C68"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/button_login"
+            app:layout_constraintStart_toStartOf="@+id/button_login"
+            app:layout_constraintTop_toBottomOf="@+id/button_login"
+            app:layout_constraintVertical_bias="0.0400000" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/entry_general_line"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/entry_general_line"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/entry_background"
+            android:text="or login via"
+            android:textColor="@color/entry_general_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/button_login_gotoRegister"
+            app:layout_constraintStart_toStartOf="@+id/button_login_gotoRegister"
+            app:layout_constraintTop_toBottomOf="@+id/button_login_gotoRegister"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.twitter.sdk.android.core.identity.TwitterLoginButton
+            android:id="@+id/imageButton_twitter"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/twitter_icon"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton_google"
+            app:layout_constraintStart_toStartOf="@+id/imageButton_google"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton_google" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/imageButton_google"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/google_icon"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <org.telegram.passport.TelegramLoginButton
+            android:id="@+id/imageButton_telegram"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="127dp"
+            android:adjustViewBounds="true"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton_twitter"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageButton_twitter"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton_twitter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

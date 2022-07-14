@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".PsychiatristAppointmentsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+            app:layout_constraintTop_toTopOf="@+id/nestedScrollView">
+
+            <TextView
+                android:id="@+id/textView_psychiatrist_appointment_title"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:text="Appointments"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_psychiatrist_appointment_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Upcoming Appointments"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView_psychiatrist_appointment_title"
+                app:layout_constraintStart_toStartOf="@+id/textView_psychiatrist_appointment_title"
+                app:layout_constraintTop_toBottomOf="@+id/textView_psychiatrist_appointment_title" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_upcoming"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/textView_psychiatrist_appointment_title"
+                app:layout_constraintStart_toStartOf="@+id/textView_psychiatrist_appointment_title"
+                app:layout_constraintTop_toBottomOf="@+id/textView_psychiatrist_appointment_desc">
+
+                <TextView
+                    android:id="@+id/textView_psychiatrist_appointment_text_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Session w/ Bob Bubbles"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_psychiatrist_appointment_0"
+                        style="@style/main_button_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Meet Link" />
+
+                    <TextView
+                        android:id="@+id/textView_psychiatrist_appointment_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="4/11/2021 2:00pm" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView_psychiatrist_appointment_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Create new appointment"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout_upcoming"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout_upcoming"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_upcoming" />
+
+            <DatePicker
+                android:id="@+id/datePicker_psychiatrist_appointment_date"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true"
+                android:theme="@style/DatePicker"
+                app:layout_constraintEnd_toEndOf="@+id/textView_psychiatrist_appointment_create"
+                app:layout_constraintStart_toStartOf="@+id/textView_psychiatrist_appointment_create"
+                app:layout_constraintTop_toBottomOf="@+id/textView_psychiatrist_appointment_create" />
+
+            <TimePicker
+                android:id="@+id/timePicker_psychiatrist_appointment_time"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:theme="@style/DatePicker"
+                android:timePickerMode="spinner"
+                app:layout_constraintEnd_toEndOf="@+id/datePicker_psychiatrist_appointment_date"
+                app:layout_constraintStart_toStartOf="@+id/datePicker_psychiatrist_appointment_date"
+                app:layout_constraintTop_toBottomOf="@+id/datePicker_psychiatrist_appointment_date" />
+
+            <TextView
+                android:id="@+id/textView_psychiatrist_appointment_patients_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="with patient"
+                app:layout_constraintEnd_toEndOf="@+id/timePicker_psychiatrist_appointment_time"
+                app:layout_constraintStart_toStartOf="@+id/timePicker_psychiatrist_appointment_time"
+                app:layout_constraintTop_toBottomOf="@+id/timePicker_psychiatrist_appointment_time" />
+
+            <ScrollView
+                android:id="@+id/scrollView_psychiatrist_appointment_patients"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/timePicker_psychiatrist_appointment_time"
+                app:layout_constraintStart_toStartOf="@+id/timePicker_psychiatrist_appointment_time"
+                app:layout_constraintTop_toBottomOf="@+id/textView_psychiatrist_appointment_patients_select">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_psychiatrist_appointment_patients_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton_psychiatrist_patients_select_0"
+                            style="@style/RadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bob Bubbles" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton_psychiatrist_patients_select_1"
+                            style="@style/RadioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Darth Vader" />
+                    </RadioGroup>
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/button_psychiatrist_appointment_create"
+                style="@style/main_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Create Appointment"
+                app:layout_constraintEnd_toEndOf="@+id/timePicker_psychiatrist_appointment_time"
+                app:layout_constraintStart_toStartOf="@+id/timePicker_psychiatrist_appointment_time"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView_psychiatrist_appointment_patients" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

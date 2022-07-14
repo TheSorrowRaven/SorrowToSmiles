@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/entry_background"
+    tools:context=".PsychiatristLicenseFragment">
+
+    <TextView
+        android:id="@+id/textView_pl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/entry_background"
+        android:fontFamily="@font/lora_bold"
+        android:text="Psychiatrist License"
+        android:textColor="@color/entry_general_text"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_pl_selectfile"
+        style="@style/entry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Select File"
+        app:layout_constraintEnd_toEndOf="@+id/textview_pl_selectedfile"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/textview_pl_selectedfile"
+        app:layout_constraintTop_toBottomOf="@+id/textview_pl_selectedfile" />
+
+    <TextView
+        android:id="@+id/textview_pl_selectedfile"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@color/entry_background"
+        android:textColor="@color/entry_general_text"
+        app:layout_constraintEnd_toEndOf="@+id/textView_pl_title"
+        app:layout_constraintStart_toStartOf="@+id/textView_pl_title"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pl_title" />
+
+    <TextView
+        android:id="@+id/textView_psychiatristLicense_information"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/entry_background"
+        android:textColor="@color/entry_general_text"
+        android:text="If below image is submitted image then the server has received your upload"
+        app:layout_constraintEnd_toEndOf="@+id/networkimage_uploaded"
+        app:layout_constraintStart_toStartOf="@+id/networkimage_uploaded"
+        app:layout_constraintTop_toBottomOf="@+id/button_pl_submit" />
+
+    <TextView
+        android:id="@+id/textView_psychiatristLicense_warning"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/entry_background"
+        android:text="NOTE: If you don't submit, your registration will be deleted after 24 hours"
+        android:textColor="@color/entry_general_text"
+        app:layout_constraintEnd_toEndOf="@+id/textView_psychiatristLicense_information"
+        app:layout_constraintStart_toStartOf="@+id/textView_psychiatristLicense_information"
+        app:layout_constraintTop_toBottomOf="@+id/textView_psychiatristLicense_information" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/networkimage_uploaded"
+        style="@style/img"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_psychiatristLicense_warning" />
+
+    <Button
+        android:id="@+id/button_pl_submit"
+        style="@style/entry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="@+id/button_pl_selectfile"
+        app:layout_constraintStart_toStartOf="@+id/button_pl_selectfile"
+        app:layout_constraintTop_toBottomOf="@+id/button_pl_selectfile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

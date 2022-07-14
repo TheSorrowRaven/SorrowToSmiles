@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".PsychiatristMainMenuFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView_logo"
+        style="@style/img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/sorrowtosmileslogo_dark_on_invis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_psychiatristmm_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:fontFamily="@font/lora_bold"
+        android:text="Welcome, Dr.Fixit"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_logo" />
+
+
+    <Button
+        android:id="@+id/button_psychiatristmm_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/profile_icon"
+        android:gravity="bottom|center"
+        android:scaleType="fitCenter"
+        android:textColor="@color/main_bar_bottom_text"
+        app:backgroundTint="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_psychiatristmm_ping"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="PING"
+        app:layout_constraintEnd_toEndOf="@+id/button_psychiatristmm_patients"
+        app:layout_constraintStart_toStartOf="@+id/button_psychiatristmm_patients"
+        app:layout_constraintTop_toBottomOf="@+id/button_psychiatristmm_patients" />
+
+    <Button
+        android:id="@+id/button_psychiatristmm_patients"
+        style="@style/main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Patients"
+        app:layout_constraintEnd_toEndOf="@+id/textView_psychiatristmm_welcome"
+        app:layout_constraintStart_toStartOf="@+id/textView_psychiatristmm_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/textView_psychiatristmm_welcome" />
+
+    <Button
+        android:id="@+id/button_psychiatristmm_friends"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="FRIENDS &amp; FAMILY"
+        app:layout_constraintEnd_toEndOf="@+id/button_psychiatristmm_ping"
+        app:layout_constraintStart_toStartOf="@+id/button_psychiatristmm_ping"
+        app:layout_constraintTop_toBottomOf="@+id/button_psychiatristmm_ping" />
+
+    <Button
+        android:id="@+id/button_psychiatristmm_talkingcircle"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TALKING CIRCLES"
+        app:layout_constraintEnd_toEndOf="@+id/button_psychiatristmm_friends"
+        app:layout_constraintStart_toStartOf="@+id/button_psychiatristmm_friends"
+        app:layout_constraintTop_toBottomOf="@+id/button_psychiatristmm_friends" />
+
+    <Button
+        android:id="@+id/button_psychiatristmm_appointments"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="APPOINTMENTS"
+        app:layout_constraintEnd_toEndOf="@+id/button_psychiatristmm_talkingcircle"
+        app:layout_constraintStart_toStartOf="@+id/button_psychiatristmm_talkingcircle"
+        app:layout_constraintTop_toBottomOf="@+id/button_psychiatristmm_talkingcircle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

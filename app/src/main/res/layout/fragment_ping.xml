@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".PingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_title_ping"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:text="Ping"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_ping_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Click to reply to these pings!"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView_title_ping"
+                app:layout_constraintStart_toStartOf="@+id/textView_title_ping"
+                app:layout_constraintTop_toBottomOf="@+id/textView_title_ping" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_pendingPings"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/textView_ping_desc"
+                app:layout_constraintStart_toStartOf="@+id/textView_ping_desc"
+                app:layout_constraintTop_toBottomOf="@+id/textView_ping_desc">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_replyPing_name_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_focal_button_text"
+                        android:text="Mark Zuckerberg"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button_replyPing_yes_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="I am fine" />
+
+                        <Button
+                            android:id="@+id/button_replyPing_no_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="I am not fine" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_replyPing_name_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/main_focal_button_text"
+                        android:text="Jeff Bezos"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button_replyPing_yes_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="I am fine" />
+
+                        <Button
+                            android:id="@+id/button_replyPing_no_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="I am not fine" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_ping_desc_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Click to ping them!"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout_pendingPings"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout_pendingPings"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_pendingPings" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_toPingList"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/textView_ping_desc_1"
+                app:layout_constraintStart_toStartOf="@+id/textView_ping_desc_1"
+                app:layout_constraintTop_toBottomOf="@+id/textView_ping_desc_1">
+
+
+                <Button
+                    android:id="@+id/button_ping_0"
+                    style="@style/main_button_sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Elon Musk" />
+
+                <Button
+                    android:id="@+id/button_ping_1"
+                    style="@style/main_button_sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Tim Cook" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_ping_reply_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Ping Replies"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout_toPingList"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout_toPingList"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_toPingList" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_pastPings"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/textView_ping_reply_desc"
+                app:layout_constraintStart_toStartOf="@+id/textView_ping_reply_desc"
+                app:layout_constraintTop_toBottomOf="@+id/textView_ping_reply_desc">
+
+                <TextView
+                    android:id="@+id/textView_ping_reply_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text='Elon Musk replied "I Am Fine"\n10/10/2021 4:23am'
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textView_ping_reply_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text='Jeff Bezos replied "I Am Not Fine"\n5/10/2021 11:47pm'
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

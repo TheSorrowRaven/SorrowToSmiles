@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".MainMenuFragment">
+
+    <ImageView
+        android:id="@+id/imageView_logo"
+        style="@style/img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/sorrowtosmileslogo_dark_on_invis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:fontFamily="@font/lora_bold"
+        android:text="Welcome, Bob"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_logo" />
+
+
+    <Button
+        android:id="@+id/button_help"
+        android:layout_width="196sp"
+        android:layout_height="196sp"
+        android:background="@drawable/texture_circle"
+        android:text="HELP"
+        android:textColor="@color/main_warning_text"
+        android:textStyle="bold"
+        app:backgroundTint="@color/main_warning_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_welcome"
+        app:layout_constraintVertical_bias="0.110000014" />
+
+    <Button
+        android:id="@+id/button_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/profile_icon"
+        android:gravity="bottom|center"
+        android:scaleType="fitCenter"
+        android:textColor="@color/main_bar_bottom_text"
+        app:backgroundTint="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_iamfine"
+        style="@style/main_button"
+        android:layout_width="164sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-96dp"
+        android:layout_marginBottom="-8dp"
+        android:text="I AM FINE"
+        android:textColor="@color/main_sub_button_text"
+        android:textStyle="bold"
+        app:backgroundTint="@color/main_sub_button_background"
+        app:layout_constraintBottom_toBottomOf="@+id/button_help"
+        app:layout_constraintStart_toEndOf="@+id/button_help"
+        app:layout_constraintTop_toTopOf="@+id/button_help"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button_ping"
+        style="@style/main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-64dp"
+        android:text="PING"
+        app:layout_constraintBottom_toBottomOf="@+id/button_help"
+        app:layout_constraintEnd_toEndOf="@+id/button_help"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_help"
+        app:layout_constraintTop_toTopOf="@+id/button_help" />
+
+    <Button
+        android:id="@+id/button_psychiatrists"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16dp"
+        android:layout_marginEnd="-32dp"
+        android:text="PSYCHIATRISTS"
+        app:layout_constraintBottom_toBottomOf="@+id/button_help"
+        app:layout_constraintEnd_toEndOf="@+id/button_help"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button_help"
+        app:layout_constraintTop_toTopOf="@+id/button_help"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_questionnaire"
+        style="@style/main_button"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="QUESTIONNAIRE"
+        app:layout_constraintEnd_toEndOf="@+id/button_help"
+        app:layout_constraintStart_toStartOf="@+id/button_help"
+        app:layout_constraintTop_toBottomOf="@+id/button_help" />
+
+    <Button
+        android:id="@+id/button_friends"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="FRIENDS &amp; FAMILY"
+        app:layout_constraintEnd_toEndOf="@+id/button_questionnaire"
+        app:layout_constraintStart_toStartOf="@+id/button_questionnaire"
+        app:layout_constraintTop_toBottomOf="@+id/button_questionnaire" />
+
+    <Button
+        android:id="@+id/button_talkingcircle"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TALKING CIRCLES"
+        app:layout_constraintEnd_toEndOf="@+id/button_friends"
+        app:layout_constraintStart_toStartOf="@+id/button_friends"
+        app:layout_constraintTop_toBottomOf="@+id/button_friends" />
+
+    <Button
+        android:id="@+id/button_appointments"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="APPOINTMENTS"
+        app:layout_constraintEnd_toEndOf="@+id/button_talkingcircle"
+        app:layout_constraintStart_toStartOf="@+id/button_talkingcircle"
+        app:layout_constraintTop_toBottomOf="@+id/button_talkingcircle" />
+
+    <Button
+        android:id="@+id/button_diary"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-32dp"
+        android:layout_marginBottom="-8dp"
+        android:text="DIARY"
+        app:layout_constraintBottom_toBottomOf="@+id/button_help"
+        app:layout_constraintEnd_toEndOf="@+id/button_help"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_help" />
+</androidx.constraintlayout.widget.ConstraintLayout>

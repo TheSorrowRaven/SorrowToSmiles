@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "90822878962",
+    "project_id": "sorrowtosmiles-1636365419702",
+    "storage_bucket": "sorrowtosmiles-1636365419702.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90822878962:android:8ecf68b382dc186394526b",
+        "android_client_info": {
+          "package_name": "com.sef.sorrowtosmiles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90822878962-ij24ntrc8ljkmbq8dstgjlfsnpo52tio.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sef.sorrowtosmiles",
+            "certificate_hash": "7e3a7e5bd27694cecda6bc04c6f4e71dc07371ca"
+          }
+        },
+        {
+          "client_id": "90822878962-h26nfh40eiph5l5nuf8lgo4i9b4fn8jn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5AGJOmQsSGGFH7uA8BKOmK6IboEbbY10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90822878962-h26nfh40eiph5l5nuf8lgo4i9b4fn8jn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

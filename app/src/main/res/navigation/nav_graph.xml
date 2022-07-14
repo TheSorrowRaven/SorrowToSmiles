@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.sef.sorrowtosmiles.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/RegisterFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_login_to_mainmenu"
+            app:destination="@id/MainMenuFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_psychiatristMainMenuFragment"
+            app:destination="@id/psychiatristMainMenuFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_adminMainMenuFragment"
+            app:destination="@id/adminMainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.sef.sorrowtosmiles.RegisterFragment"
+        android:label="Registration"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_register_to_psychiatristlicense"
+            app:destination="@id/PsychiatristLicenseFragment"
+            app:enterAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MainMenuFragment"
+        android:name="com.sef.sorrowtosmiles.MainMenuFragment"
+        android:label="Main Menu"
+        tools:layout="@layout/fragment_mainmenu">
+        <action
+            android:id="@+id/action_MainMenuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_psychiatristsFragment"
+            app:destination="@id/psychiatristsFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_pingFragment"
+            app:destination="@id/pingFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_IAmFineFragment"
+            app:destination="@id/IAmFineFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_questionnaireFragment"
+            app:destination="@id/questionnaireFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_talkingCircleFragment"
+            app:destination="@id/talkingCircleFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_appointmentsFragment"
+            app:destination="@id/appointmentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PsychiatristLicenseFragment"
+        android:name="com.sef.sorrowtosmiles.PsychiatristLicenseFragment"
+        android:label="Psychiatrist License"
+        tools:layout="@layout/fragment_psychiatrist_license" />
+    <fragment
+        android:id="@+id/adminMainMenuFragment"
+        android:name="com.sef.sorrowtosmiles.AdminMainMenuFragment"
+        android:label="Admin"
+        tools:layout="@layout/fragment_admin_mainmenu">
+        <action
+            android:id="@+id/action_adminMainMenuFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentsFragment"
+        android:name="com.sef.sorrowtosmiles.AppointmentsFragment"
+        android:label="Appointments"
+        tools:layout="@layout/fragment_appointments" />
+    <fragment
+        android:id="@+id/diaryFragment"
+        android:name="com.sef.sorrowtosmiles.DiaryFragment"
+        android:label="Diary"
+        tools:layout="@layout/fragment_diary" />
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.sef.sorrowtosmiles.FriendsFragment"
+        android:label="Friends"
+        tools:layout="@layout/fragment_friends" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.sef.sorrowtosmiles.HelpFragment"
+        android:label="HELP"
+        tools:layout="@layout/fragment_help">
+        <action
+            android:id="@+id/action_helpFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+        <action
+            android:id="@+id/action_helpFragment_to_psychiatristsFragment"
+            app:destination="@id/psychiatristsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/IAmFineFragment"
+        android:name="com.sef.sorrowtosmiles.IAmFineFragment"
+        android:label="I Am Fine"
+        tools:layout="@layout/fragment_i_am_fine">
+        <action
+            android:id="@+id/action_IAmFineFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pingFragment"
+        android:name="com.sef.sorrowtosmiles.PingFragment"
+        android:label="Ping"
+        tools:layout="@layout/fragment_ping">
+        <action
+            android:id="@+id/action_pingFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sef.sorrowtosmiles.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psychiatristAppointmentsFragment"
+        android:name="com.sef.sorrowtosmiles.PsychiatristAppointmentsFragment"
+        android:label="Appointments"
+        tools:layout="@layout/fragment_psychiatrist_appointments" />
+    <fragment
+        android:id="@+id/psychiatristMainMenuFragment"
+        android:name="com.sef.sorrowtosmiles.PsychiatristMainMenuFragment"
+        android:label="Psychiatrist Main Menu"
+        tools:layout="@layout/fragment_psychiatrist_mainmenu">
+        <action
+            android:id="@+id/action_psychiatristMainMenuFragment_to_psychiatristAppointmentsFragment"
+            app:destination="@id/psychiatristAppointmentsFragment" />
+        <action
+            android:id="@+id/action_psychiatristMainMenuFragment_to_psychiatristPatientsFragment"
+            app:destination="@id/psychiatristPatientsFragment" />
+        <action
+            android:id="@+id/action_psychiatristMainMenuFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+        <action
+            android:id="@+id/action_psychiatristMainMenuFragment_to_talkingCircleFragment"
+            app:destination="@id/talkingCircleFragment" />
+        <action
+            android:id="@+id/action_psychiatristMainMenuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_psychiatristMainMenuFragment_to_pingFragment"
+            app:destination="@id/pingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/talkingCircleFragment"
+        android:name="com.sef.sorrowtosmiles.TalkingCircleFragment"
+        android:label="Talking Circle"
+        tools:layout="@layout/fragment_talkingcircle" />
+    <fragment
+        android:id="@+id/questionnaireFragment"
+        android:name="com.sef.sorrowtosmiles.QuestionnaireFragment"
+        android:label="Questionnaire"
+        tools:layout="@layout/fragment_questionnaire">
+        <action
+            android:id="@+id/action_questionnaireFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psychiatristPatientsFragment"
+        android:name="com.sef.sorrowtosmiles.PsychiatristPatientsFragment"
+        android:label="Patients"
+        tools:layout="@layout/fragment_psychiatrist_patients">
+        <action
+            android:id="@+id/action_psychiatristPatientsFragment_to_questionnaireFragment"
+            app:destination="@id/questionnaireFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psychiatristsFragment"
+        android:name="com.sef.sorrowtosmiles.PsychiatristsFragment"
+        android:label="Psychiatrists"
+        tools:layout="@layout/fragment_psychiatrists" >
+        <action
+            android:id="@+id/action_psychiatristsFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment" />
+    </fragment>
+</navigation>

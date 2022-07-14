@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".ProfileFragment">
+
+    <TextView
+        android:id="@+id/textView_profile_name"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Bob"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button_logout"
+        style="@style/main_button_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="LOGOUT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_profile_name" />
+
+    <TextView
+        android:id="@+id/textView_profile_accounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="ACCOUNTS"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_logout" />
+
+    <ImageButton
+        android:id="@+id/imageButton_twitter"
+        style="@style/img"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="-8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/textView_profile_accounts"
+        app:layout_constraintTop_toBottomOf="@+id/textView_profile_accounts"
+        app:srcCompat="@drawable/twitter_icon" />
+
+
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/connect_twitter"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_twitter" />
+
+    <TextView
+        android:id="@+id/textView_twitter_status"
+        android:layout_width="208dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:text="Connected: @therealbob"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_twitter"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_twitter"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_twitter" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton_google"
+        style="@style/img"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/imageButton_twitter"
+        app:layout_constraintTop_toBottomOf="@+id/connect_twitter"
+        app:srcCompat="@drawable/google_icon" />
+
+
+    <TextView
+        android:id="@+id/textView_google_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Connected: Bob Bubbles"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_google"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_google"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_google"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/connect_google"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_google" />
+
+    <ImageButton
+        android:id="@+id/imageButton_telegram"
+        style="@style/img"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/imageButton_google"
+        app:layout_constraintTop_toBottomOf="@+id/connect_google"
+        app:srcCompat="@drawable/telegram_icon" />
+
+    <TextView
+        android:id="@+id/textView_telegram_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Click icon to connect"
+        android:textSize="14sp"
+        android:textColor="@color/main_warning_background"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_telegram"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_telegram"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_telegram"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <org.telegram.passport.TelegramLoginButton
+        android:id="@+id/connect_telegram"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_telegram" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
